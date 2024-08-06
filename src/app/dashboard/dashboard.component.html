@@ -1,0 +1,72 @@
+<div class="container">
+    <div class="data">
+        <div class="cards">
+            <div class="totalOrders">
+                <span class="orderIcon"><mat-icon >shopping_bag</mat-icon></span>
+                <span class="textInsideCard" >Total Orders</span>
+               <div class="orders">
+                <span class="numberOfOrders">75</span>
+                <span class="arrowIcon"><mat-icon>arrow_drop_up</mat-icon> 3%</span>
+               </div>
+            </div>
+            <div class="totalOrders">
+                <span class="orderIcon"><mat-icon>shopping_bag</mat-icon></span>
+                <span class="textInsideCard">Total Delivered</span>
+                <div class="orders">
+                    <span class="numberOfOrders">70</span>
+                <span class="arrowIcon"><mat-icon>arrow_drop_down</mat-icon> 3%</span>
+                </div>
+            </div>
+            <div class="totalOrders">
+                <span class="orderIcon"><mat-icon>shopping_bag</mat-icon></span>
+                <span class="textInsideCard">Total Cancelled</span>
+                <div class="orders">
+                    <span class="numberOfOrders">05</span>
+                <span class="arrowIcon"><mat-icon>arrow_drop_up</mat-icon> 3%</span>
+                </div>
+            </div>
+            <div class="totalOrders">
+                <span class="orderIcon"><mat-icon>shopping_bag</mat-icon></span>
+                <span class="textInsideCard">Total Revenue</span>
+               <div class="orders">
+                <span class="numberOfOrders">$12k</span>
+                <span class="arrowIcon"><mat-icon>arrow_drop_down</mat-icon> 3%</span>
+               </div>
+            </div>
+        </div>
+        <div class="graph">
+            <div class="active">
+                <div class="activeHeading">Activity</div>
+                <select name="" id="" class="activeOptions">
+                    <option value="">Weekly</option>
+                    <option value="">Monthly</option>
+                    <option value="">Yearly</option>
+                </select>
+            </div>
+            <div class="activity">
+                <div class="yAxis">
+                    <span  *ngFor="let y of yAxis">{{y}}</span>
+                </div>
+               <div class="breakLine">
+                <span class="breakLines"></span>
+                <span class="breakLines"></span>
+                <span class="breakLines"></span>
+                <span class="breakLines"></span>
+               </div>
+            </div>
+            <div class="graphFlow">
+                <span class="flow"[style.left]="i *(xbarWidth)  + '%'"
+                 *ngFor="let flow of graphFlow ; let i= index">{{flow}}</span>
+            </div>
+            <div class="chart">
+                <span *ngFor="let item of data; let i =index" class="bar" 
+                [style.left]="(i * (barWidth + barSpacing)) + '%'" 
+                [style.height]="item.height + 'em'"></span>
+            </div> 
+        </div>
+        <app-recent-orders></app-recent-orders>
+    </div>
+    <div class="details">
+        <app-right-side></app-right-side>
+    </div>
+</div>

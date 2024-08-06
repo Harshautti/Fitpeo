@@ -1,0 +1,140 @@
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.data{
+    width: 70%;
+    height: 100%;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1%;
+}
+.totalOrders{
+    background-color:  rgb(59, 54, 54);
+    width: 20%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding: 1%;
+    border-radius: 10px;
+    color: white;
+}
+.orderIcon{
+    font-size: 2em;
+    background-color: rgb(75, 95, 95);
+    width: max-content;
+    border-radius:10px;
+    padding: 4%;
+}
+.numberOfOrders{
+    padding: 5%;
+    font-size: 2em;
+    font-weight: bold;
+}
+.textInsideCard{
+    font-size: smaller;
+    padding: 1%;
+}
+.orders{
+    display: flex;
+    justify-content: space-between;
+}
+.arrowIcon{
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
+}
+.arrowIcon mat-icon{
+   position: relative;
+   top: 5px;
+   left: 5px;
+   font-weight:bold;
+}
+.activity{
+    display: flex;
+}
+.graph{
+    height:max-content;
+    background-color:  rgb(59, 54, 54);
+    margin: 10px;
+    margin-top: 2%;
+    border-radius: 5px;
+    color: aliceblue;
+}
+.yAxis{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+}
+.yAxis span{
+    padding: 3%;
+    margin-left: 50%;
+    margin-top: 8px;
+    font-size: 1em;
+    font-weight: bold;
+}
+.breakLine{
+    width: 88%;
+    padding-bottom: 5px;
+}
+.breakLines{
+    display: flex;
+    border: 1px solid rgb(152, 129, 129);
+    margin: 4% auto;
+}
+.graphFlow{
+    display: flex;
+    position: relative;
+    left: 11%;
+}
+.flow{
+    position:absolute;
+    bottom: 20px;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.chart{
+    position: relative;
+    left: 12%;
+    width: 88%;
+    display: flex;
+    align-items: flex-end;
+}
+.bar{
+    position: absolute;
+    border-radius: 10px;
+    padding: 1%;
+    margin-bottom: 5%;
+    background-color: rgb(171, 200, 200);
+    box-sizing: border-box;
+}
+.active{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 15px;
+}
+.activeHeading{
+    position: relative;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.activeOptions{
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color:gray ;
+}
+.details{
+    margin: 10px;
+    width: 30%;
+}

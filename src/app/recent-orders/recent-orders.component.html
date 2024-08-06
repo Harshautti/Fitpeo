@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="heading">Recent Orders</div>
+    <table class="customerDetails">
+        <thead >
+           <tr >
+            <th>Customer</th>
+            <th>Order No.</th>
+            <th>Amount</th>
+            <th>Status</th>
+           </tr>
+        </thead>
+       <tbody >
+            <ng-container *ngFor="let details of profileDetails" >
+                <tr class="details" >
+                  <td>  
+                    <img class="profilePic" src="../../assets/profilepic.jpeg" alt="">
+                    <span class="name">{{details.name}}</span>
+                  </td>
+                    <td>{{details.orderNo}}</td>
+                    <td>{{details.amount}}</td>
+                    <td class="status"  >
+                        <span [ngStyle]="getStatus(details.status)">{{details.status}}</span>
+                    </td>
+                </tr>
+                <tr >
+                    <td colspan="4"><hr/></td>
+                </tr>
+            </ng-container>
+       </tbody>
+    </table>
+    
+</div>

@@ -1,0 +1,73 @@
+
+<div class="container">
+    <div class="netProfit">
+        <div class="netAmount">
+            <h3 class="head">Net Profit</h3>
+           <div class="profit">
+            <span class="amount">$6759.25</span>
+            <span class="arrowIcon"> <mat-icon>arrow_drop_up</mat-icon>3%</span>
+           </div>
+        </div>
+        <div class="spinner">
+            <div class="backgroundSpinner">
+               <div class="percentage">
+                <span class="percent">70%</span>
+                <span class="complete"> Goal Completed</span>
+               </div>
+                <mat-progress-spinner color="accent"  [strokeWidth]="12" [diameter]="70" value="100" mode="determinate"></mat-progress-spinner> 
+            </div>
+           <div class="progressSpinner">
+            <mat-progress-spinner  [strokeWidth]="12" [diameter]="70" value="70" mode="determinate"></mat-progress-spinner>
+        </div>
+           <div class="intimateText">
+            <span>* The value here has been rounded 0ff.</span>
+           </div>
+        </div>
+    </div>
+    <div class="goals">
+        <div class="goal">
+            <div>
+            <mat-icon class="goalIcon">my_location</mat-icon>
+            <span>Goals</span>
+            </div>
+            <mat-icon id="arrowIcon">arrow_forward_ios</mat-icon>
+        </div>
+        <div class="goal">
+           <div>
+            <mat-icon class="goalIcon">lunch_dining</mat-icon>
+            <span>Popular Dishes</span>
+           </div>
+            <mat-icon id="arrowIcon">arrow_forward_ios</mat-icon>
+        </div>
+        <div class="goal">
+           <div>
+            <mat-icon class="goalIcon">restaurant_menu</mat-icon>
+            <span>Menus</span>
+           </div>
+            <mat-icon id="arrowIcon">arrow_forward_ios</mat-icon>
+        </div>
+    </div>
+    <div class="feedback">
+        <div class="heading">
+            <h3>Customer's Feedback</h3>
+        </div>
+       <div class="customerDetails" *ngFor="let customer of customerDetails">
+        <div class="name">
+            <img src="../../assets/profilepic.jpeg" alt="noImg">
+            <span>{{customer.name}}</span>
+        </div>
+        <div class="star" >
+            <span><mat-icon [ngStyle]="{'color': i < customer.starRate ? filledColor : emptyColor}"
+                 *ngFor="let star of customer.stars;let i = index">star_rate</mat-icon></span>
+        </div>
+        <div class="comment">
+            <span>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                 Possimus, libero odit unde quae eligendi at animi a. 
+                 Magnam quae maiores quos, optio ab officia. 
+                Eius labore consectetur aut perspiciatis nulla.</span>
+        </div>
+        
+        <hr/>
+       </div>
+    </div>
+</div>
